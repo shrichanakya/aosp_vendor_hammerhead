@@ -13,6 +13,7 @@
 # limitations under the License.
 
 LOCAL_STEM := hammerhead/device-partial.mk
+SUPERUSER_EMBEDDED := true
 
 $(call inherit-product-if-exists, vendor/broadcom/$(LOCAL_STEM))
 $(call inherit-product-if-exists, vendor/lge/$(LOCAL_STEM))

@@ -18,3 +18,4 @@ $(call inherit-product-if-exists, vendor/broadcom/$(LOCAL_STEM))
 $(call inherit-product-if-exists, vendor/lge/$(LOCAL_STEM))
 $(call inherit-product-if-exists, vendor/qcom/$(LOCAL_STEM))
 $(call inherit-product-if-exists, vendor/google/gapps/device-partial.mk)
+

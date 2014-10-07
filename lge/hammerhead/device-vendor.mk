@@ -18,17 +18,3 @@ $(call inherit-product-if-exists, vendor/broadcom/$(LOCAL_STEM))
 $(call inherit-product-if-exists, vendor/lge/$(LOCAL_STEM))
 $(call inherit-product-if-exists, vendor/qcom/$(LOCAL_STEM))
 $(call inherit-product-if-exists, vendor/google/gapps/device-partial.mk)
-
-# SU Support
-SUPERUSER_EMBEDDED := true
-
-PRODUCT_PACKAGES += \
-    Superuser \
-    su
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.root_access=3
-
-# Enable ADB authentication
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.adb.secure=1

@@ -5,14 +5,11 @@
 
 . /tmp/backuptool.functions
 
-
-
-
 list_files() {
 cat <<EOF
 app/FaceLock.apk
-app/FaceLock.odex
 lib/libfacelock_jni.so
+lib/libfilterpack_facedetect.so
 vendor/pittpatt/models/detection/multi_pose_face_landmark_detectors.7/left_eye-y0-yi45-p0-pi45-r0-ri20.lg_32.bin
 vendor/pittpatt/models/detection/multi_pose_face_landmark_detectors.7/nose_base-y0-yi45-p0-pi45-r0-ri20.lg_32.bin
 vendor/pittpatt/models/detection/multi_pose_face_landmark_detectors.7/right_eye-y0-yi45-p0-pi45-r0-ri20.lg_32-2.bin

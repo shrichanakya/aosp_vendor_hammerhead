@@ -8,109 +8,86 @@ list_files() {
 cat <<EOF
 app/Books.apk
 app/CalendarGoogle.apk
-app/CalendarGoogle.odex
-app/ChromeBookmarksSyncAdapter.apk
 app/CloudPrint2.apk
 app/Drive.apk
 app/GenieWidget.apk
-app/GenieWidget.odex
 app/Gmail2.apk
-app/Gmail2.odex
 app/GoogleContactsSyncAdapter.apk
-app/GoogleContactsSyncAdapter.odex
 app/GoogleEars.apk
-app/GoogleEars.odex
 app/GoogleEarth.apk
 app/GoogleHome.apk
 app/GoogleTTS.apk
-app/GoogleTTS.odex
 app/Hangouts.apk
 app/Keep.apk
-app/Keep.odex
 app/LatinImeGoogle.apk
-app/LatinImeGoogle.odex
 app/Magazines.apk
 app/Maps.apk
-app/MediaUploader.apk
-app/MediaUploader.odex
 app/Music2.apk
 app/PlayGames.apk
 app/PlusOne.apk
 app/QuickOffice.apk
 app/Street.apk
+app/SunBeam.apk
 app/Videos.apk
 app/YouTube.apk
 etc/g.prop
+etc/permissions/com.google.android.ble.xml
+etc/permissions/com.google.android.camera2.xml
 etc/permissions/com.google.android.maps.xml
 etc/permissions/com.google.android.media.effects.xml
 etc/permissions/com.google.widevine.software.drm.xml
 etc/permissions/features.xml
 etc/preferred-apps/google.xml
+framework/com.google.android.ble.jar
+framework/com.google.android.camera2.jar
 framework/com.google.android.maps.jar
-framework/com.google.android.maps.odex
 framework/com.google.android.media.effects.jar
-framework/com.google.android.media.effects.odex
 framework/com.google.widevine.software.drm.jar
-framework/com.google.widevine.software.drm.odex
 lib/libAppDataSearch.so
-lib/libdocscanner_image-v7a.so
+lib/libconscrypt_gmscore_jni.so
+lib/libcrashreporter.so
+lib/libcronet.so
+lib/libdocscanner_image.so
 lib/libdocsimageutils.so
 lib/libearthandroid.so
 lib/libearthmobile.so
-lib/libfacetracker.so
 lib/libfilterframework_jni.so
-lib/libfilterpack_facedetect.so
-lib/libfrsdk.so
+lib/libframesequence.so
 lib/libgames_rtmp_jni.so
+lib/libgcastv2_base.so
+lib/libgcastv2_support.so
+lib/libgmm-jni.so
+lib/libgmscore.so
+lib/libgms-ocrclient.so
+lib/libgoogle_hotword_jni.so
 lib/libgoogle_recognizer_jni_l.so
+lib/libgoogle-ocrclient.so
+lib/libjgcastservice.so
 lib/libjni_latinime.so
-lib/libjni_latinimegoogle.so
-lib/libjni_t13n_shared_engine.so
-lib/liblinearalloc.so
+lib/libjni_unbundled_latinimegoogle.so
+lib/libm2ts_player.so
 lib/libmoviemaker-jni.so
-lib/libndk1.so
 lib/libnetjni.so
-lib/libocrclient.so
-lib/libpatts_engine_jni_api.so
-lib/libplus_jni_v8.so
-lib/librectifier-v7a.so
-lib/librs.antblur.so
-lib/librs.antblur_constant.so
-lib/librs.antblur_drama.so
-lib/librs.drama.so
-lib/librs.film_base.so
-lib/librs.fixedframe.so
-lib/librs.grey.so
-lib/librs.image_wrapper.so
-lib/librs.retrolux.so
-lib/librsjni.so
-lib/libRSSupport.so
-lib/libspeexwrapper.so
+lib/libpatts_engine_jni_api_ub.210302120.so
+lib/libphotoeditor_native.so
+lib/librectifier.so
+lib/libspeexwrapper_ub.210302120.so
 lib/libvcdecoder_jni.so
 lib/libvideochat_jni.so
 lib/libvorbisencoder.so
 lib/libwebp_android.so
-lib/libwebrtc_audio_coding.so
-lib/libwebrtc_audio_preprocessing.so
+lib/libWhisper.so
 lib/libWVphoneAPI.so
 priv-app/CalendarProvider.apk
-priv-app/CalendarProvider.odex
 priv-app/GoogleBackupTransport.apk
-priv-app/GoogleBackupTransport.odex
 priv-app/GoogleFeedback.apk
-priv-app/GoogleFeedback.odex
 priv-app/GoogleLoginService.apk
-priv-app/GoogleLoginService.odex
+priv-app/GoogleOneTimeInitializer.apk
 priv-app/GooglePartnerSetup.apk
-priv-app/GooglePartnerSetup.odex
 priv-app/GoogleServicesFramework.apk
-priv-app/GoogleServicesFramework.odex
-priv-app/OneTimeInitializer.apk
-priv-app/OneTimeInitializer.odex
 priv-app/Phonesky.apk
 priv-app/PrebuiltGmsCore.apk
 priv-app/SetupWizard.apk
-priv-app/SetupWizard.odex
 priv-app/talkback.apk
 priv-app/Velvet.apk
 priv-app/Wallet.apk
@@ -146,6 +123,24 @@ usr/srec/en-US/wordlist
 EOF
 }
 
+# Backup/Restore using /sdcard if the installed GApps size plus a buffer for other addon.d backups (204800=200MB) is larger than /tmp
+installed_gapps_size_kb=$(grep "^installed_gapps_size_kb" /tmp/gapps.prop | cut -d= -f2)
+if [ ! "$installed_gapps_size_kb" ]; then
+  installed_gapps_size_kb=$(cd /system; du -ak `list_files` | awk '{ i+=$1 } END { print i }')
+  echo "installed_gapps_size_kb=$installed_gapps_size_kb" >> /tmp/gapps.prop
+fi
+
+free_tmp_size_kb=$(grep "^free_tmp_size_kb" /tmp/gapps.prop | cut -d= -f2)
+if [ ! "$free_tmp_size_kb" ]; then
+  free_tmp_size_kb=$(df -k /tmp | tail -n 1 | awk '{ print $4 }')
+  echo "free_tmp_size_kb=$free_tmp_size_kb" >> /tmp/gapps.prop
+fi
+
+buffer_size_kb=204800
+if [ $((installed_gapps_size_kb + buffer_size_kb)) -ge $free_tmp_size_kb ]; then
+  C=/sdcard/tmp-gapps
+fi
+
 case "$1" in
   backup)
     list_files | while read FILE DUMMY; do
@@ -166,20 +161,77 @@ case "$1" in
     # Stub
   ;;
   pre-restore)
-    # Stub
-  ;;
-  post-restore)
-    # Remove the Pico TTS app
-    rm -f /system/app/PicoTts.apk
+    # Additional ROM/AOSP Removals from GApps Remover
 
-    # Remove the AOSP Stock Launcher after restore
-    rm -f /system/priv-app/Launcher2.apk
-    rm -f /system/priv-app/Launcher3.apk
-    rm -f /system/app/Launcher2.apk
-    rm -f /system/app/Launcher3.apk
-
-    # Remove the AOSP Keyboard after restore - NOT on Mini Builds
+    # Check for existence of .gapps-stock in /sdcard for flash modifications
+    if [ -e /sdcard/.gapps-stock ]; then
+        if ! (grep -qi "launcher" /sdcard/.gapps-stock ); then
+            # Remove the stock/AOSP Launcher
+            :
+            rm -f /system/app/CMHome.apk
+            rm -f /system/app/CustomLauncher3.apk
+            rm -f /system/app/Launcher2.apk
+            rm -f /system/app/Launcher3.apk
+            rm -f /system/app/LiquidLauncher.apk
+            rm -f /system/app/Paclauncher.apk
+            rm -f /system/app/Trebuchet.apk
+            rm -f /system/priv-app/CMHome.apk
+            rm -f /system/priv-app/CustomLauncher3.apk
+            rm -f /system/priv-app/Launcher2.apk
+            rm -f /system/priv-app/Launcher3.apk
+            rm -f /system/priv-app/LiquidLauncher.apk
+            rm -f /system/priv-app/Paclauncher.apk
+            rm -f /system/priv-app/Trebuchet.apk
+        fi
+        if ! (grep -qi "mms" /sdcard/.gapps-stock ); then
+            # Remove the stock/AOSP MMS app
+            :
+            rm -f /system/priv-app/Mms.apk
+        fi
+        if ! (grep -qi "pico" /sdcard/.gapps-stock ); then
+            # Remove the stock/AOSP PicoTTS
+            :
+            rm -f /system/priv-app/PicoTts.apk
+            rm -f /system/app/PicoTts.apk
+            rm -f /system/lib/libttscompat.so
+            rm -f /system/lib/libttspico.so
+            rm -rf /system/tts/lang_pico/*
+        fi        
+    else
+        # Remove the stock/AOSP Launcher
+        :
+        rm -f /system/app/CMHome.apk
+        rm -f /system/app/CustomLauncher3.apk
+        rm -f /system/app/Launcher2.apk
+        rm -f /system/app/Launcher3.apk
+        rm -f /system/app/LiquidLauncher.apk
+        rm -f /system/app/Paclauncher.apk
+        rm -f /system/app/Trebuchet.apk
+        rm -f /system/priv-app/CMHome.apk
+        rm -f /system/priv-app/CustomLauncher3.apk
+        rm -f /system/priv-app/Launcher2.apk
+        rm -f /system/priv-app/Launcher3.apk
+        rm -f /system/priv-app/LiquidLauncher.apk
+        rm -f /system/priv-app/Paclauncher.apk
+        rm -f /system/priv-app/Trebuchet.apk
+  
+        # Remove the stock/AOSP MMS app
+        rm -f /system/priv-app/Mms.apk
+        
+        # Remove the stock/AOSP PicoTTS
+        rm -f /system/priv-app/PicoTts.apk
+        rm -f /system/app/PicoTts.apk
+        rm -f /system/lib/libttscompat.so
+        rm -f /system/lib/libttspico.so
+        rm -rf /system/tts/lang_pico/*
+    fi
+  
+    # Remove the stock/AOSP Keyboard
     rm -f /system/app/LatinIME.apk
+    rm -f /system/lib/libjni_latinimegoogle.so
+
+    # Removing 'Rogue' Keyboard app found in Velocity (and possibly other) ROM's
+    rm -f /system/app/GoogleLatinIme.apk
 
     # Remove pieces from other GApps or ROM's (from updater-script)
     rm -f /system/app/BrowserProviderProxy.apk
@@ -191,7 +243,6 @@ case "$1" in
     rm -f /system/app/GoogleCloudPrint.apk
     rm -f /system/app/GoogleHangouts.apk
     rm -f /system/app/GoogleKeep.apk
-    rm -f /system/app/GoogleOneTimeInitializer.apk
     rm -f /system/app/GooglePlus.apk
     rm -f /system/app/PartnerBookmarksProvider.apk
     rm -f /system/app/QuickSearchBox.apk
@@ -201,6 +252,7 @@ case "$1" in
     rm -f /system/priv-app/Calendar.apk
     rm -f /system/priv-app/GmsCore.apk
     rm -f /system/priv-app/GoogleNow.apk
+    rm -f /system/priv-app/OneTimeInitializer.apk
     rm -f /system/priv-app/QuickSearchBox.apk
     rm -f /system/priv-app/Vending.apk
 
@@ -209,6 +261,7 @@ case "$1" in
     rm -f /system/app/GoogleBackupTransport.apk
     rm -f /system/app/GoogleFeedback.apk
     rm -f /system/app/GoogleLoginService.apk
+    rm -f /system/app/GoogleOneTimeInitializer.apk
     rm -f /system/app/GooglePartnerSetup.apk
     rm -f /system/app/GoogleServicesFramework.apk
     rm -f /system/app/OneTimeInitializer.apk
@@ -218,5 +271,14 @@ case "$1" in
     rm -f /system/app/talkback.apk
     rm -f /system/app/Velvet.apk
     rm -f /system/app/Wallet.apk
-;;
+  ;;
+  post-restore)
+    # Fix ownership/permissions and clean up after backup and restore from /sdcard
+    for i in `list_files`; do
+      busybox chown root.root /system/$i
+      busybox chmod 644 /system/$i
+      busybox chmod 755 `busybox dirname /system/$i`
+    done
+    rm -rf /sdcard/tmp-gapps
+  ;;
 esac

@@ -3,24 +3,17 @@ PRODUCT_COPY_FILES += \
     vendor/google/gapps/proprietary/system/addon.d/70-gapps.sh:system/addon.d/70-gapps.sh:google \
     vendor/google/gapps/proprietary/system/etc/g.prop:system/etc/g.prop:google \
     vendor/google/gapps/proprietary/system/etc/permissions/com.google.android.maps.xml:system/etc/permissions/com.google.android.maps.xml:google \
-    vendor/google/gapps/proprietary/system/etc/permissions/com.google.android.ble.xml:system/etc/permissions/com.google.android.ble.xml:google \
-	vendor/google/gapps/proprietary/system/etc/permissions/com.google.android.camera2.xml:system/etc/permissions/com.google.android.camera2.xml:google \
-	vendor/google/gapps/proprietary/system/etc/permissions/com.google.android.media.effects.xml:system/etc/permissions/com.google.android.media.effects.xml:google \
+    vendor/google/gapps/proprietary/system/etc/permissions/com.google.android.media.effects.xml:system/etc/permissions/com.google.android.media.effects.xml:google \
     vendor/google/gapps/proprietary/system/etc/permissions/com.google.widevine.software.drm.xml:system/etc/permissions/com.google.widevine.software.drm.xml:google \
     vendor/google/gapps/proprietary/system/etc/permissions/features.xml:system/etc/permissions/features.xml:google \
     vendor/google/gapps/proprietary/system/etc/preferred-apps/google.xml:system/etc/preferred-apps/google.xml:google \
     vendor/google/gapps/proprietary/system/framework/com.google.android.maps.jar:system/framework/com.google.android.maps.jar:google \
     vendor/google/gapps/proprietary/system/framework/com.google.android.media.effects.jar:system/framework/com.google.android.media.effects.jar:google \
     vendor/google/gapps/proprietary/system/framework/com.google.widevine.software.drm.jar:system/framework/com.google.widevine.software.drm.jar:google \
-	vendor/google/gapps/proprietary/system/framework/com.google.android.ble.xml:system/framework/com.google.android.ble.xml:google \
-	vendor/google/gapps/proprietary/system/framework/com.google.android.camera2.xml:system/framework/com.google.android.camera2.xml:google \
     vendor/google/gapps/proprietary/system/lib/libAppDataSearch.so:system/lib/libAppDataSearch.so:google \
     vendor/google/gapps/proprietary/system/lib/libchromeview.so:system/lib/libchromeview.so:google \
     vendor/google/gapps/proprietary/system/lib/libchromium_net.so:system/lib/libchromium_net.so:google \
-    vendor/google/gapps/proprietary/system/lib/libconscrypt_gmscore_jni.so:system/lib/libconscrypt_gmscore_jni.so:google \
-	vendor/google/gapps/proprietary/system/lib/libcrashreporter.so:system/lib/libcrashreporter.so:google \
-	vendor/google/gapps/proprietary/system/lib/libcronet.so:system/lib/libcronet.so:google \
-	vendor/google/gapps/proprietary/system/lib/libdocscanner_image.so:system/lib/libdocscanner_image.so:google \
+    vendor/google/gapps/proprietary/system/lib/libdocscanner_image-v7a.so:system/lib/libdocscanner_image-v7a.so:google \
     vendor/google/gapps/proprietary/system/lib/libdocsimageutils.so:system/lib/libdocsimageutils.so:google \
     vendor/google/gapps/proprietary/system/lib/libearthandroid.so:system/lib/libearthandroid.so:google \
     vendor/google/gapps/proprietary/system/lib/libearthmobile.so:system/lib/libearthmobile.so:google \
@@ -28,30 +21,19 @@ PRODUCT_COPY_FILES += \
     vendor/google/gapps/proprietary/system/lib/libfilterframework_jni.so:system/lib/libfilterframework_jni.so:google \
     vendor/google/gapps/proprietary/system/lib/libfilterpack_facedetect.so:system/lib/libfilterpack_facedetect.so:google \
     vendor/google/gapps/proprietary/system/lib/libfrsdk.so:system/lib/libfrsdk.so:google \
-    vendor/google/gapps/proprietary/system/lib/libframesequence.so:system/lib/libframesequence.so:google \
-	vendor/google/gapps/proprietary/system/lib/libgames_rtmp_jni.so:system/lib/libgames_rtmp_jni.so:google \
+    vendor/google/gapps/proprietary/system/lib/libgames_rtmp_jni.so:system/lib/libgames_rtmp_jni.so:google \
     vendor/google/gapps/proprietary/system/lib/libgoogle_recognizer_jni_l.so:system/lib/libgoogle_recognizer_jni_l.so:google \
-    vendor/google/gapps/proprietary/system/lib/libgcastv2_base.so:system/lib/libgcastv2_base.so:google \
-	vendor/google/gapps/proprietary/system/lib/libgcastv2_support.so:system/lib/libgcastv2_support.so:google \
-	vendor/google/gapps/proprietary/system/lib/libgmm-jni.so:system/lib/libgmm-jni.so:google \
-	vendor/google/gapps/proprietary/system/lib/libgms-ocrclient.so:system/lib/libgms-ocrclient.so:google \
-	vendor/google/gapps/proprietary/system/lib/libgmscore.so:system/lib/libgmscore.so:google \
-	vendor/google/gapps/proprietary/system/lib/libgoogle-ocrclient.so:system/lib/libgoogle-ocrclient.so:google \
-	vendor/google/gapps/proprietary/system/lib/libgoogle_hotword_jni.so:system/lib/libgoogle_hotword_jni.so:google \
-	vendor/google/gapps/proprietary/system/lib/libgcastservice.so:system/lib/libgcastservice.so:google \
-	vendor/google/gapps/proprietary/system/lib/libjni_eglfence.so:system/lib/libjni_eglfence.so:google \
+    vendor/google/gapps/proprietary/system/lib/libjni_eglfence.so:system/lib/libjni_eglfence.so:google \
     vendor/google/gapps/proprietary/system/lib/libjni_filtershow_filters.so:system/lib/libjni_filtershow_filters.so:google \
     vendor/google/gapps/proprietary/system/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so:google \
-    vendor/google/gapps/proprietary/system/lib/libjni_unbundled_latinimegoogle.so:system/lib/libjni_unbundled_latinimegoogle.so:google \
-	vendor/google/gapps/proprietary/system/lib/libjni_latinime.so:system/lib/libjni_latinime.so:google \
+    vendor/google/gapps/proprietary/system/lib/libjni_latinime.so:system/lib/libjni_latinime.so:google \
     vendor/google/gapps/proprietary/system/lib/libjni_t13n_shared_engine.so:system/lib/libjni_t13n_shared_engine.so:google \
     vendor/google/gapps/proprietary/system/lib/liblinearalloc.so:system/lib/liblinearalloc.so:google \
-    vendor/google/gapps/proprietary/system/lib/libm2ts_player.so:system/lib/libm2ts_player.so:google \
-	vendor/google/gapps/proprietary/system/lib/libmoviemaker-jni.so:system/lib/libmoviemaker-jni.so:google \
+    vendor/google/gapps/proprietary/system/lib/libmoviemaker-jni.so:system/lib/libmoviemaker-jni.so:google \
     vendor/google/gapps/proprietary/system/lib/libndk1.so:system/lib/libndk1.so:google \
     vendor/google/gapps/proprietary/system/lib/libnetjni.so:system/lib/libnetjni.so:google \
     vendor/google/gapps/proprietary/system/lib/libocrclient.so:system/lib/libocrclient.so:google \
-    vendor/google/gapps/proprietary/system/lib/libpatts_engine_jni_api_ub.210302120.so:system/lib/libpatts_engine_jni_api_ub.210302120.so:google \
+    vendor/google/gapps/proprietary/system/lib/libpatts_engine_jni_api.so:system/lib/libpatts_engine_jni_api.so:google \
     vendor/google/gapps/proprietary/system/lib/libplus_jni_v8.so:system/lib/libplus_jni_v8.so:google \
     vendor/google/gapps/proprietary/system/lib/librectifier-v7a.so:system/lib/librectifier-v7a.so:google \
     vendor/google/gapps/proprietary/system/lib/librs.antblur_constant.so:system/lib/librs.antblur_constant.so:google \
@@ -65,17 +47,14 @@ PRODUCT_COPY_FILES += \
     vendor/google/gapps/proprietary/system/lib/librsjni.so:system/lib/librsjni.so:google \
     vendor/google/gapps/proprietary/system/lib/librs.retrolux.so:system/lib/librs.retrolux.so:google \
     vendor/google/gapps/proprietary/system/lib/libRSSupport.so:system/lib/libRSSupport.so:google \
-    vendor/google/gapps/proprietary/system/lib/libspeexwrapper_ub.210302120.so:system/lib/libspeexwrapper_ub.210302120.so:google \
-    vendor/google/gapps/proprietary/system/lib/libphotoeditor_native.so:system/lib/libphotoeditor_native.so:google \
-	vendor/google/gapps/proprietary/system/lib/librectifier.so:system/lib/librectifier.so:google \
-	vendor/google/gapps/proprietary/system/lib/libvcdecoder_jni.so:system/lib/libvcdecoder_jni.so:google \
+    vendor/google/gapps/proprietary/system/lib/libspeexwrapper.so:system/lib/libspeexwrapper.so:google \
+    vendor/google/gapps/proprietary/system/lib/libvcdecoder_jni.so:system/lib/libvcdecoder_jni.so:google \
     vendor/google/gapps/proprietary/system/lib/libvideochat_jni.so:system/lib/libvideochat_jni.so:google \
     vendor/google/gapps/proprietary/system/lib/libvorbisencoder.so:system/lib/libvorbisencoder.so:google \
     vendor/google/gapps/proprietary/system/lib/libwebp_android.so:system/lib/libwebp_android.so:google \
     vendor/google/gapps/proprietary/system/lib/libwebrtc_audio_coding.so:system/lib/libwebrtc_audio_coding.so:google \
     vendor/google/gapps/proprietary/system/lib/libwebrtc_audio_preprocessing.so:system/lib/libwebrtc_audio_preprocessing.so:google \
-    vendor/google/gapps/proprietary/system/lib/libWhisper.so:system/lib/libWhisper.so:google \
-	vendor/google/gapps/proprietary/system/lib/libWVphoneAPI.so:system/lib/libWVphoneAPI.so:google \
+    vendor/google/gapps/proprietary/system/lib/libWVphoneAPI.so:system/lib/libWVphoneAPI.so:google \
     vendor/google/gapps/proprietary/system/usr/srec/en-US/c_fst:system/usr/srec/en-US/c_fst:google \
     vendor/google/gapps/proprietary/system/usr/srec/en-US/clg:system/usr/srec/en-US/clg:google \
     vendor/google/gapps/proprietary/system/usr/srec/en-US/commands.abnf:system/usr/srec/en-US/commands.abnf:google \
@@ -119,14 +98,12 @@ PRODUCT_PACKAGES += \
     GenieWidget \
     Gmail2 \
     GoogleBackupTransport \
-	GoogleCamera \
     GoogleContactsSyncAdapter \
     GoogleEars \
     GoogleEarth \
     GoogleFeedback \
     GoogleHome \
     GoogleLoginService \
-	GoogleOneTimeInitializer \
     GooglePartnerSetup \
     GoogleServicesFramework \
     GoogleTTS \
@@ -145,7 +122,6 @@ PRODUCT_PACKAGES += \
     QuickOffice \
     SetupWizard \
     Street \
-	SunBeam \
     talkback \
     TimeService \
     Velvet \

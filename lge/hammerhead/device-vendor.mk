@@ -13,7 +13,6 @@
 # limitations under the License.
 
 LOCAL_STEM := hammerhead/device-partial.mk
-SUPERUSER_PACKAGE := com.mypackagename.superuser
 
 $(call inherit-product-if-exists, vendor/broadcom/$(LOCAL_STEM))
 $(call inherit-product-if-exists, vendor/lge/$(LOCAL_STEM))

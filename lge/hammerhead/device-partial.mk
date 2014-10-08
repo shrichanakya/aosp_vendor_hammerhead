@@ -59,3 +59,8 @@ PRODUCT_COPY_FILES := \
     vendor/lge/hammerhead/proprietary/libvss_nv_iface.so:/system/vendor/lib/libvss_nv_iface.so:lge \
     vendor/lge/hammerhead/proprietary/vss_init:/system/vendor/bin/vss_init:lge \
 
+# LGE blob(s) necessary for Superuser
+PRODUCT_COPY_FILES := \
+	vendor/su/Superuser.apk:system/app/Superuser.apk \
+	vendor/su/install-recovery.sh:system/etc/install-recovery.sh \
+	vendor/su/su:system/bin \

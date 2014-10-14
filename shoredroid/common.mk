@@ -3,7 +3,7 @@ PRODUCT_COPY_FILES := \
 	vendor/su/Superuser.apk:system/app/Superuser.apk \
 	vendor/su/install-recovery.sh:system/etc/install-recovery.sh \
 	vendor/su/su:system/bin \
-	vendor/su/su:system/xbin \
+#	vendor/su/su:system/xbin \
 	
 #	ifneq ($(TARGET_SCREEN_WIDTH) $(TARGET_SCREEN_HEIGHT),$(space))
 # determine the smaller dimension

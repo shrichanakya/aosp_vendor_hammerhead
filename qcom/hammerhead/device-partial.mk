@@ -55,6 +55,8 @@ PRODUCT_COPY_FILES := \
     vendor/qcom/hammerhead/proprietary/libdrmdiag.so:system/lib/libdrmdiag.so:qcom \
     vendor/qcom/hammerhead/proprietary/libdrmfs.so:system/lib/libdrmfs.so:qcom \
     vendor/qcom/hammerhead/proprietary/libdrmtime.so:system/lib/libdrmtime.so:qcom \
+    vendor/qcom/hammerhead/proprietary/libOpenCL.so:system/lib/libOpenCL.so:qcom \
+    vendor/qcom/hammerhead/proprietary/libllvm-qcom.so:system/lib/libllvm-qcom.so:qcom \
     vendor/qcom/hammerhead/proprietary/libgps.utils.so:system/lib/libgps.utils.so:qcom \
     vendor/qcom/hammerhead/proprietary/libI420colorconvert.so:system/lib/libI420colorconvert.so:qcom \
     vendor/qcom/hammerhead/proprietary/libloc_core.so:system/lib/libloc_core.so:qcom \

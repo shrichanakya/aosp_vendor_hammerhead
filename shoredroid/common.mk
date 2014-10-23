@@ -31,7 +31,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/shoredroid/shoreaudio/libv4a_fx_kk_NEON.so:system/lib/soundfx/libv4a_fx_kk_NEON.so \
     vendor/shoredroid/shoreaudio/ViPER4Android_FX_A4.x.apk:system/app/ViPER4Android_FX_A4.x.apk \
-    vendor/shoredroid/shoreaudio/audio_effects.conf:system/vendor/etc/audio_effects.conf
 
 PRODUCT_PACKAGES += \
     PACPerformance

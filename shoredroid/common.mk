@@ -38,8 +38,8 @@ PRODUCT_COPY_FILES += \
     
 #Build Properties for ShoreDroid
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.shoreware_version = v1.5
-    ro.build.display.id = KTU84P
+    ro.shoreware_version = v1.5 \
+    ro.build.display.id = KTU84P \
     ro.rommanager.developerid = shoredroid
 
 PRODUCT_PACKAGES += \

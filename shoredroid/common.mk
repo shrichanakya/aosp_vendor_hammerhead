@@ -40,7 +40,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.shoreware_version = v1.5
     ro.build.display.id = KTU84P
-    ro.rommanager.developerid=shoredroid
+    ro.rommanager.developerid = shoredroid
 
 PRODUCT_PACKAGES += \
     PACPerformance

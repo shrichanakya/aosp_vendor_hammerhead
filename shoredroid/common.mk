@@ -35,6 +35,11 @@ PRODUCT_COPY_FILES += \
 #MirrorEnabler
 PRODUCT_COPY_FILES += \
     vendor/shoredroid/app-release.apk:system/app/app-release.apk
+    
+#Build Properties for ShoreDroid
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.shoreware_version = v1.5
+    ro.build_number = KTU84P
 
 PRODUCT_PACKAGES += \
     PACPerformance

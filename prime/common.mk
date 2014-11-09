@@ -12,14 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Boot Animation
-PRODUCT_COPY_FILES += \
-    vendor/prime/bootanimation/bootanimation.zip:system/media/bootanimation.zip
-
 # Enable wireless Xbox 360 controller support
 PRODUCT_COPY_FILES += \
     frameworks/base/data/keyboards/Vendor_045e_Product_028e.kl:system/usr/keylayout/Vendor_045e_Product_0719.kl
 
-#PRODUCT_PACKAGES += \
-#    PACPerformance
+PRODUCT_PACKAGES += \
+    PACPerformance
     

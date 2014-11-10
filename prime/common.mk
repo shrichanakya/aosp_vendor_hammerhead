@@ -20,6 +20,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/shoredroid/shoreaudio/libv4a_fx_LP_NEON.so:system/lib/soundfx/libv4a_fx_LP_NEON.so \
     vendor/shoredroid/shoreaudio/ViPER4Android_FX_A4.x.apk:system/app/ViPER4Android_FX_A4.x.apk \
+    
+#Build Properties for ShoreDroid
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.rommanager.developerid=shoredroid
+    ro.modversion=Prime_vB1.4
 
 PRODUCT_PACKAGES += \
     PACPerformance

@@ -15,6 +15,11 @@
 # Enable wireless Xbox 360 controller support
 PRODUCT_COPY_FILES += \
     frameworks/base/data/keyboards/Vendor_045e_Product_028e.kl:system/usr/keylayout/Vendor_045e_Product_0719.kl
+    
+# ViPER
+PRODUCT_COPY_FILES += \
+    vendor/shoredroid/shoreaudio/libv4a_fx_LP_NEON.so:system/lib/soundfx/libv4a_fx_LP_NEON.so \
+    vendor/shoredroid/shoreaudio/ViPER4Android_FX_A4.x.apk:system/app/ViPER4Android_FX_A4.x.apk \
 
 PRODUCT_PACKAGES += \
     PACPerformance

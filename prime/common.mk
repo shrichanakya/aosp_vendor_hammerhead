@@ -18,8 +18,8 @@ PRODUCT_COPY_FILES += \
     
 # ViPER
 PRODUCT_COPY_FILES += \
-    vendor/shoredroid/shoreaudio/libv4a_fx_LP_NEON.so:system/lib/soundfx/libv4a_fx_LP_NEON.so \
-    vendor/shoredroid/shoreaudio/ViPER4Android_FX_A4.x.apk:system/app/ViPER4Android_FX_A4.x.apk \
+    vendor/prime/shoreaudio/libv4a_fx_LP_NEON.so:system/lib/soundfx/libv4a_fx_LP_NEON.so \
+    vendor/prime/shoreaudio/ViPER4Android_FX_A4.x.apk:system/app/ViPER4Android_FX_A4.x.apk \
     
 #Build Properties for ShoreDroid
 PRODUCT_PROPERTY_OVERRIDES += \

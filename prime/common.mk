@@ -23,8 +23,8 @@ PRODUCT_COPY_FILES += \
     
 #Build Properties for Prime
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.rommanager.developerid=shoredroid
-    ro.modversion=Prime_vB1.4
+    ro.rommanager.developerid=shoredroid \
+    ro.modversion=Prime_vB1.5
 
 PRODUCT_PACKAGES += \
     PACPerformance

@@ -17,15 +17,15 @@ PRODUCT_COPY_FILES += \
     frameworks/base/data/keyboards/Vendor_045e_Product_028e.kl:system/usr/keylayout/Vendor_045e_Product_0719.kl
     
 # ViPER
-PRODUCT_COPY_FILES += \
-    vendor/prime/shoreaudio/libv4a_fx_LP_NEON.so:system/lib/soundfx/libv4a_fx_LP_NEON.so \
-    vendor/prime/shoreaudio/ViPER4Android_FX_A4.x.apk:system/app/ViPER4Android_FX_A4.x.apk \
+#PRODUCT_COPY_FILES += \
+#    vendor/prime/shoreaudio/libv4a_fx_LP_NEON.so:system/lib/soundfx/libv4a_fx_LP_NEON.so \
+#    vendor/prime/shoreaudio/ViPER4Android_FX_A4.x.apk:system/app/ViPER4Android_FX_A4.x.apk \
     
-#Build Properties for Prime
+# Build Properties for Prime
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.rommanager.developerid=shoredroid \
-    ro.modversion=Prime_vQA1.6.9
+    ro.modversion=Prime_vB1.7
 
 PRODUCT_PACKAGES += \
-    PACPerformance
+    
     

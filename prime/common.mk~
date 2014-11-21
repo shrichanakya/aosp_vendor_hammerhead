@@ -17,15 +17,70 @@ PRODUCT_COPY_FILES += \
     frameworks/base/data/keyboards/Vendor_045e_Product_028e.kl:system/usr/keylayout/Vendor_045e_Product_0719.kl
     
 # ViPER
-PRODUCT_COPY_FILES += \
-    vendor/prime/shoreaudio/libv4a_fx_LP_NEON.so:system/lib/soundfx/libv4a_fx_LP_NEON.so \
-    vendor/prime/shoreaudio/ViPER4Android_FX_A4.x.apk:system/app/ViPER4Android_FX_A4.x.apk \
+#PRODUCT_COPY_FILES += \
+#    vendor/prime/shoreaudio/libv4a_fx_LP_NEON.so:system/lib/soundfx/libv4a_fx_LP_NEON.so \
+#    vendor/prime/shoreaudio/ViPER4Android_FX_A4.x.apk:system/app/ViPER4Android_FX_A4.x.apk \
     
-#Build Properties for Prime
+# Build Properties for Prime
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.rommanager.developerid=shoredroid \
-    ro.modversion=Prime_vB1.6
+    ro.modversion=Prime_vB1.7
+
+# PrimeInjection Files
+PRODUCT_COPY_FILES += \
+    vendor/prime/primeinjection/CalendarGooglePrebuilt/:system/app/CalendarGooglePrebuilt/ \
+    vendor/prime/primeinjection/CloudPrint2/:system/app/CloudPrint2/ \
+    vendor/prime/primeinjection/GoogleCamera/:system/app/GoogleCamera/ \
+    vendor/prime/primeinjection/GoogleContactsSyncAdapter/:system/app/GoogleContactsSyncAdapter/ \
+    vendor/prime/primeinjection/GoogeEars/:system/app/GoogeEars/ \
+    vendor/prime/primeinjection/GoogleHome/:system/app/GoogleHome/ \
+    vendor/prime/primeinjection/GooglePlus/:system/app/GooglePlus/ \
+    vendor/prime/primeinjection/GoogleTTS/:system/app/GoogleTTS/ \
+    vendor/prime/primeinjection/LatinImeGoogle/:system/app/LatinImeGoogle/ \
+    vendor/prime/primeinjection/PrebuildBugle/:system/app/PrebuildBugle/ \
+    vendor/prime/primeinjection/PrebuildExchange3Google/:system/app/PrebuildExchange3Google/ \
+    vendor/prime/primeinjection/PrebuildGmail/:system/app/PrebuildGmail/ \
+    vendor/prime/primeinjection/com.google.android.camera2.xml:system/etc/permissions/com.google.android.camera2 \
+    vendor/prime/primeinjection/com.google.android.maps.xml:system/etc/permissions/com.google.android.maps.xml \
+    vendor/prime/primeinjection/com.google.android.media.effects.xml:system/etc/permissions/com.google.android.media.effects.xml \
+    vendor/prime/primeinjection/com.google.widevine.software.drm.xml:system/etc/permissions/com.google.widevine.software.drm.xml \
+    vendor/prime/primeinjection/google.xml:system/etc/preferred-apps/google.xml \
+    vendor/prime/primeinjection/android.test.runner.jar:system/framework/android.test.runner.jar \
+    vendor/prime/primeinjection/com.android.location.provider.jar:system/framework/com.android.location.provider.jar \
+    vendor/prime/primeinjection/com.android.media.remotedisplay.jar:system/framework/com.android.media.remotedisplay.jar \
+    vendor/prime/primeinjection/com.google.android.camera2.jar:system/framework/com.google.android.camera2.jar \
+    vendor/prime/primeinjection/com.google.android.dialer.support.jar:system/framework/com.google.android.dialer.support.jar \
+    vendor/prime/primeinjection/com.google.android.maps.jar:system/framework/com.google.android.maps.jar \
+    vendor/prime/primeinjection/com.google.android.media.effects.jar:system/framework/com.google.android.media.effects.jar \
+    vendor/prime/primeinjection/com.google.widevine.software.drm.jar:system/framework/com.google.widevine.software.drm.jar \
+    vendor/prime/primeinjection/libfaceunlock_jni.so:system/lib/libfaceunlock_jni.so \
+    vendor/prime/primeinjection/libfacetracker.so:system/lib/libfacetracker.so \
+    vendor/prime/primeinjection/libfilterpack_facedetect.so:system/lib/libfilterpack_facedetect.so \
+    vendor/prime/primeinjection/libgoogle_hotword_jni.so:system/lib/libgoogle_hotword_jni.so \
+    vendor/prime/primeinjection/libgoogle_recognizer_jni_l.so:system/lib/libgoogle_recognizer_jni_l.so \
+    vendor/prime/primeinjection/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so \
+    vendor/prime/primeinjection/libmmcamera_interface.so:system/lib/libmmcamera_interface.so \
+    vendor/prime/primeinjection/libpatts_engine_jni_api.so:system/lib/libpatts_engine_jni_api.so \
+    vendor/prime/primeinjection/libspeexresampler.so:system/lib/libspeexresampler.so \
+    vendor/prime/primeinjection/libspeexwrapper.so:system/lib/libspeexwrapper.so \
+    vendor/prime/primeinjection/libvcdecoder_jni.so:system/lib/libvcdecoder_jni.so \
+    vendor/prime/primeinjection/CalendarProvider/:system/priv-app/CalendarProvider/ \
+    vendor/prime/primeinjection/GoogleBackupTransport/:system/priv-app/GoogleBackupTransport/ \
+    vendor/prime/primeinjection/GoogleContacts/:system/priv-app/GoogleContacts/ \
+    vendor/prime/primeinjection/GoogleDialer/:system/priv-app/GoogleDialer/ \
+    vendor/prime/primeinjection/GoogleFeedback/:system/priv-app/GoogleFeedback/ \
+    vendor/prime/primeinjection/GoogleLoginService/:system/priv-app/GoogleLoginService/ \
+    vendor/prime/primeinjection/GoogleOneTimeInitializer/:system/priv-app/GoogleOneTimeInitializer/ \
+    vendor/prime/primeinjection/GooglePartnerSetup/:system/priv-app/GooglePartnerSetup/ \
+    vendor/prime/primeinjection/GoogleServicesFramework/:system/priv-app/GoogleServicesFramework/ \
+    vendor/prime/primeinjection/Phonesky/:system/priv-app/Phonesky/ \
+    vendor/prime/primeinjection/PrebuiltGmsCore/:system/priv-app/PrebuiltGmsCore/ \
+    vendor/prime/primeinjection/SetupWizard/:system/priv-app/SetupWizard/ \
+    vendor/prime/primeinjection/TagGoogle/:system/priv-app/TagGoogle/ \
+    vendor/prime/primeinjection/talkback/:system/priv-app/talkback/ \
+    vendor/prime/primeinjection/Velvet/:system/priv-app/Velvet/ \
+    vendor/prime/primeinjection/pittpatt/:system/vendor/pittpatt/
 
 PRODUCT_PACKAGES += \
-    PACPerformance
+    
     

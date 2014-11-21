@@ -20,11 +20,20 @@ PRODUCT_COPY_FILES += \
 #PRODUCT_COPY_FILES += \
 #    vendor/prime/shoreaudio/libv4a_fx_LP_NEON.so:system/lib/soundfx/libv4a_fx_LP_NEON.so \
 #    vendor/prime/shoreaudio/ViPER4Android_FX_A4.x.apk:system/app/ViPER4Android_FX_A4.x.apk \
-    
+
+# Prime Tones and apps
+PRODUCT_COPY_FILES += \
+     vendor/prime/shoreaudio/Autobot.ogg:system/media/audio/notifications/Autobots.ogg \
+     vendor/prime/shoreaudio/RollOut.ogg:system/media/audio/ringtones/RollOut.ogg \
+     vendor/prime/shoreaudio/Transforme.ogg:system/media/audio/ringtones/Transforme.ogg \
+     vendor/prime/bootanimation/bootanimation.zip:system/media/bootanimation.zip
+ 
 # Build Properties for Prime
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.rommanager.developerid=shoredroid \
     ro.modversion=Prime_vB1.7
+    ro.config.ringtone=RollOut.ogg
+    ro.config.notification_sound=Autobot.ogg
 
 PRODUCT_PACKAGES += \
     

@@ -26,12 +26,14 @@ PRODUCT_COPY_FILES += \
      vendor/prime/shoreaudio/Autobot.ogg:system/media/audio/notifications/Autobots.ogg \
      vendor/prime/shoreaudio/RollOut.ogg:system/media/audio/ringtones/RollOut.ogg \
      vendor/prime/shoreaudio/Transforme.ogg:system/media/audio/ringtones/Transforme.ogg \
-     vendor/prime/bootanimation/bootanimation.zip:system/media/bootanimation.zip
+     vendor/prime/bootanimation/bootanimation.zip:system/media/bootanimation.zip \
+     vendor/prime/primefix/libmmcamera_interface.so:system/lib/libmmcamera_interface.so \
+     vendor/prime/primefix/ForumPrime.apk:system/app/ForumPrime.apk
  
 # Build Properties for Prime
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.rommanager.developerid=shoredroid \
-    ro.modversion=Prime_vB1.7
+    ro.modversion=Prime_Weekly_20141121
     ro.config.ringtone=RollOut.ogg
     ro.config.notification_sound=Autobot.ogg
 

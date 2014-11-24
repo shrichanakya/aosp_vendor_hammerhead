@@ -33,9 +33,9 @@ PRODUCT_COPY_FILES += \
 # Build Properties for Prime
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.rommanager.developerid=shoredroid \
-    ro.modversion=Prime_Weekly_20141121
+    ro.modversion=Prime_Weekly_20141128
     ro.config.ringtone=RollOut.ogg
-    ro.config.notification_sound=Autobot.ogg
+    ro.config.notification_sound=Autobots.ogg
 
 PRODUCT_PACKAGES += \
     KernelTweaker

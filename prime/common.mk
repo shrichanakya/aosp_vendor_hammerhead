@@ -28,7 +28,8 @@ PRODUCT_COPY_FILES += \
      vendor/prime/shoreaudio/Transforme.ogg:system/media/audio/ringtones/Transforme.ogg \
      vendor/prime/bootanimation/bootanimation.zip:system/media/bootanimation.zip \
      vendor/prime/primefix/libmmcamera_interface.so:system/lib/libmmcamera_interface.so \
-     vendor/prime/primefix/ForumPrime.apk:system/app/ForumPrime.apk
+     vendor/prime/primefix/ForumPrime.apk:system/app/ForumPrime.
+	 vendor/prime/primefix/Change.apk:system/app/Change.apk
  
 # Build Properties for Prime
 PRODUCT_PROPERTY_OVERRIDES += \

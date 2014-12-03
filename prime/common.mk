@@ -39,5 +39,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.notification_sound=Autobots.ogg
 
 PRODUCT_PACKAGES += \
-    KernelTweaker
+    KernelTweaker \
+    FileManager
     

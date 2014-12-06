@@ -40,5 +40,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PACKAGES += \
     KernelTweaker \
-    CMFileManager
+    CMFileManager \
+    Terminal
     

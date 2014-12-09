@@ -17,9 +17,9 @@ PRODUCT_COPY_FILES += \
     frameworks/base/data/keyboards/Vendor_045e_Product_028e.kl:system/usr/keylayout/Vendor_045e_Product_0719.kl
     
 # ViPER
-#PRODUCT_COPY_FILES += \
-#    vendor/prime/shoreaudio/libv4a_fx_LP_NEON.so:system/lib/soundfx/libv4a_fx_LP_NEON.so \
-#    vendor/prime/shoreaudio/ViPER4Android_FX_A4.x.apk:system/app/ViPER4Android_FX_A4.x.apk \
+PRODUCT_COPY_FILES += \
+    vendor/prime/shoreaudio/libv4a_fx_LP_NEON.so:system/lib/soundfx/libv4a_fx_LP_NEON.so \
+    vendor/prime/shoreaudio/ViPER4Android_FX_A4.x.apk:system/app/ViPER4Android_FX_A4.x.apk \
 
 # Prime Tones and apps
 PRODUCT_COPY_FILES += \
@@ -28,15 +28,18 @@ PRODUCT_COPY_FILES += \
      vendor/prime/shoreaudio/Transforme.ogg:system/media/audio/ringtones/Transforme.ogg \
      vendor/prime/bootanimation/bootanimation.zip:system/media/bootanimation.zip \
      vendor/prime/primefix/libmmcamera_interface.so:system/lib/libmmcamera_interface.so \
-     vendor/prime/primefix/ForumPrime.apk:system/app/ForumPrime.apk
+     vendor/prime/primefix/ForumPrime.apk:system/app/ForumPrime.apk \
+     vendor/prime/primefix/Change.apk:system/app/Change.apk
  
 # Build Properties for Prime
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.rommanager.developerid=shoredroid \
-    ro.modversion=Prime_Weekly_20141121
+    ro.modversion=Prime_DEV_20141205
     ro.config.ringtone=RollOut.ogg
-    ro.config.notification_sound=Autobot.ogg
+    ro.config.notification_sound=Autobots.ogg
 
 PRODUCT_PACKAGES += \
-    KernelTweaker
+    KernelTweaker \
+    CMFileManager \
+    Terminal
     

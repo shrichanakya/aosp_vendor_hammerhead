@@ -35,11 +35,10 @@ PRODUCT_COPY_FILES += \
 # Build Properties for Prime
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.rommanager.developerid=shoredroid \
-    ro.modversion=Prime_Weekly_20141212 \
+    ro.modversion=Prime_RC_20141212 \
     ro.config.ringtone=RollOut.ogg \
     ro.config.notification_sound=Autobots.ogg
 
 PRODUCT_PACKAGES += \
     KernelTweaker \
-    CMFileManager
     

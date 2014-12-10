@@ -30,7 +30,8 @@ PRODUCT_COPY_FILES += \
      vendor/prime/primefix/libmmcamera_interface.so:system/lib/libmmcamera_interface.so \
      vendor/prime/primefix/ForumPrime.apk:system/app/ForumPrime.apk \
      vendor/prime/primefix/Change.apk:system/app/Change.apk \
-     vendor/prime/shoreaudio/VLC-debug-20141205-2002.apk:system/app/VLC-debug-20141205-2002.apk
+     vendor/prime/shoreaudio/VLC-debug-20141205-2002.apk:system/app/VLC-debug-20141205-2002.apk \
+     vendor/prime/primefix/explorer-release.apk:system/app/explorer-release.apk
      
 # Build Properties for Prime
 PRODUCT_PROPERTY_OVERRIDES += \
